@@ -29,7 +29,7 @@ enviroment design
 - [x] Redux
 - [ ] Redux-thunk or Redux-saga
 - [ ] Reselect
-- [x] ImmutableJS
+- [ ] ImmutableJS
 - [ ] Semantic or Ant-Design
 - [ ] Mock API
 - [ ] Axios
@@ -38,5 +38,5 @@ enviroment design
 - [ ] duck pattern
 - [ ] reducer helper
 - [ ] ajax middleware
-- [ ] ESLint
+- [x] ESLint
 - [ ] git hook for ESLint
