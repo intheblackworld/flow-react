@@ -1,0 +1,14 @@
+# compiled output
+/dist
+
+# Dependency directories
+node_modules/
+
+# Logs
+*.log
+
+# IDE
+.vscode/*
+
+# env
+.env

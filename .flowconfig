@@ -1,0 +1,18 @@
+[include]
+./
+[ignore]
+.*/node_modules/enzyme-matchers/*
+.*/node_modules/fbemitter/node_modules/*
+.*/node_modules/fbjs/*
+.*/node_modules/flux/*
+.*/node_modules/jasmine-enzyme/*
+.*/node_modules/react-event-listener/*
+.*/node_modules/react-motion/*
+
+[libs]
+./flow-typed/
+[lints]
+
+[options]
+module.name_mapper='.+\(.s?css\)' -> 'CSSModule'
+module.name_mapper='components' -> '<PROJECT_ROOT>/components'
