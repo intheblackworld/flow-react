@@ -7,6 +7,9 @@ module.exports = {
     filename: '[hash:8]-bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   mode: 'development', // webpack4`s devtool: 'source-map'
   module: {
     rules: [

@@ -1,4 +1,5 @@
 import * as React from 'react'
 import { render } from 'react-dom'
+import Card from './components/Card'
 
-render(<h1>Hello World</h1>, document.getElementById('app'))
+render(<Card />, document.getElementById('app'))
