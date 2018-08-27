@@ -1,5 +1,6 @@
 /* HOC ducks
- * allow you to perform several operations on a list of items, and the items can be anything
+ * allow you to perform several operations on a list of items
+ * and the items can be "anything"
  */
 import { fromJS } from 'immutable';
 
@@ -49,19 +50,19 @@ const duck = (name) => {
     switch (action.type) {
       case types.reset: {
         return state
-          .set(name, [])
+          .set(name, fromJS([]))
           .set('isLoading', false)
       }
       case types.addOne: {
-        return state[name].push(action.item)
+        return state.update(name, list => list.push(action.item))
       }
 
       case types.addMany: {
-        return state[name].push(action.items)
+        return state.update(name, list => list.push(action.items))
       }
 
       default: {
-        return []
+        return state
       }
     }
   }

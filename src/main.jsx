@@ -7,7 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import reducers from './store/reducers/index'
 
 // import Card from './components/Card'
-import Admin from './containers/Admin'
+import Demo from './containers/Demo'
 
 const store = createStore(
   reducers,
@@ -17,7 +17,7 @@ const store = createStore(
 )
 render(
   <Provider store={store}>
-    <Admin />
+    <Demo />
   </Provider>,
   document.getElementById('app'),
 )
