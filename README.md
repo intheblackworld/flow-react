@@ -27,8 +27,8 @@ enviroment design
 - [x] flow
 - [x] React
 - [x] Redux
-- [ ] Redux-thunk or Redux-saga
-- [ ] Reselect
+- [ ] Redux-thunk
+- [x] Reselect
 - [x] ImmutableJS
 - [ ] Semantic or Ant-Design
 - [ ] Mock API
@@ -40,3 +40,5 @@ enviroment design
 - [ ] ajax middleware
 - [x] ESLint
 - [x] git hook for ESLint
+- [x] support decorator
+- [x] support async/await
