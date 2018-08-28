@@ -17,8 +17,8 @@ import './index.scss'
   {
     fetchDataExample,
     changeName,
-    addOne: duck('child').actions.addOne,
-    reset: duck('child').actions.reset,
+    addOne: duck('children').actions.addOne,
+    reset: duck('children').actions.reset,
   },
 )
 export default class Admin extends Component {
@@ -63,14 +63,14 @@ export default class Admin extends Component {
           type="button"
           onClick={() => this.props.reset()}
         >
-          reset Child
+          reset Children
         </button>
         <div>
           Hello, {this.props.user.name}
         </div>
         <div>
           {
-            this.props.duckEx.child.map(c => (
+            this.props.duckEx.children.map(c => (
               <div>{c.name}</div>
             ))
           }

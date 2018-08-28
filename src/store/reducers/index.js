@@ -5,7 +5,7 @@ import duck from '../HOCDucks/list'
 
 const reducers = combineReducers({
   user: userReducer,
-  duckEx: duck('child').reducer,
+  duckEx: duck('children').reducer,
   fetchExample: fetchDataExampleReducer,
 })
 

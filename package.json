@@ -51,9 +51,11 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
+    "dayjs": "^1.7.5",
     "global": "^4.3.2",
     "immutable": "^3.8.2",
     "qs": "^6.5.2",
+    "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-decoration": "^2.0.0",
     "react-dom": "^16.4.2",
