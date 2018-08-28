@@ -8,7 +8,8 @@
     "clear": "rimraf ./dist",
     "start": "webpack-dev-server -d",
     "eslint": "eslint src --fix",
-    "precommit": "yarn eslint"
+    "precommit": "yarn eslint",
+    "mock-api": "mock-json-server ./mockAPI/api.json"
   },
   "lint-staged": {
     "linters": {
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.79.0",
     "html-webpack-plugin": "^3.2.0",
+    "mock-json-server": "^1.0.0",
     "node-sass": "^4.9.3",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",

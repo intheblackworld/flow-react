@@ -1,0 +1,9 @@
+{
+  "/api/example/get-data": {
+    "post": {
+      "data": [
+        { "id": 1, "name": "test-data"}
+      ]
+    }
+  }
+}

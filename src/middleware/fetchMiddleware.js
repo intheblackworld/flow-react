@@ -1,6 +1,6 @@
 import qs from 'qs'
 
-export const API_HOST = 'http://localhost:8888/'
+export const API_HOST = 'http://localhost:8000/'
 export const API_REQUEST = Symbol('FETCH_MIDDLEWARE/API_REQUEST')
 /**
  * Example of action
@@ -56,10 +56,10 @@ export default () => next => async (action) => {
     if (contentType) {
       if (contentType === 'json') {
         fetchOptions.headers['Content-Type'] = 'application/json';
-        fetchOptions.reqData = JSON.stringify(reqData);
+        fetchOptions.body = JSON.stringify(reqData);
       } else if (contentType === 'urlEncoded') {
         fetchOptions.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-        fetchOptions.reqData = qs.stringify(reqData);
+        fetchOptions.body = qs.stringify(reqData);
       } else {
         throw new Error('Invalid contentType, currently it only support "application/json" and "application/x-www-form-urlencoded".');
       }

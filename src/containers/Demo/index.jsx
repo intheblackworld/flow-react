@@ -36,7 +36,7 @@ export default class Admin extends Component {
 
   async componentDidMount() {
     this.props.fetchDataExample(
-      'api/example/get-info',
+      'api/example/get-data',
       { test: '1' },
     )
     await console.log(123)
