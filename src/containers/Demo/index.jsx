@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
 import { throttle, autobind } from 'react-decoration'
 import { changeName } from '../../store/reducers/user'
+import { fetchDataExample } from '../../store/reducers/fetchDataExample'
 import duck from '../../store/HOCDucks/list'
 import './index.scss'
 
@@ -11,8 +12,10 @@ import './index.scss'
     // Transform Immutable Obj to Original Js Obj
     user: createSelector(() => state.get('user'), substate => substate.toJS())(),
     duckEx: createSelector(() => state.get('duckEx'), substate => substate.toJS())(),
+    example: createSelector(() => state.get('fetchExample'), substate => substate.toJS())(),
   }),
   {
+    fetchDataExample,
     changeName,
     addOne: duck('child').actions.addOne,
     reset: duck('child').actions.reset,
@@ -32,6 +35,10 @@ export default class Admin extends Component {
   }
 
   async componentDidMount() {
+    this.props.fetchDataExample(
+      'api/example/get-info',
+      { test: '1' },
+    )
     await console.log(123)
   }
 

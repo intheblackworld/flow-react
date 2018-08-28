@@ -50,6 +50,7 @@
   "dependencies": {
     "global": "^4.3.2",
     "immutable": "^3.8.2",
+    "qs": "^6.5.2",
     "react": "^16.4.2",
     "react-decoration": "^2.0.0",
     "react-dom": "^16.4.2",
@@ -57,6 +58,7 @@
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1"
   }
 }
