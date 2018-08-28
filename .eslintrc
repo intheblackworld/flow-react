@@ -70,6 +70,7 @@
   "settings": {
     "flowtype": {
       "onlyFilesWithFlowAnnotation": true
-    }
+    },
+    "import/resolver": "webpack"
   }
 }

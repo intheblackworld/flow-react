@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
 import { throttle, autobind } from 'react-decoration'
-import { changeName } from '../../store/reducers/user'
-import { fetchDataExample } from '../../store/reducers/fetchDataExample'
-import duck from '../../store/HOCDucks/list'
+import { changeName } from 'store/reducers/user'
+import { fetchDataExample } from 'store/reducers/fetchDataExample'
+import duck from 'store/HOCDucks/list'
 import './index.scss'
 
 @connect(

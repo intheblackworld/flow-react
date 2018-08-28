@@ -9,6 +9,16 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      assets: path.resolve(__dirname, './src/assets'),
+      components: path.resolve(__dirname, './src/components'),
+      containers: path.resolve(__dirname, './src/containers'),
+      libs: path.resolve(__dirname, './src/libs'),
+      middleware: path.resolve(__dirname, './src/middleware'),
+      store: path.resolve(__dirname, './src/store'),
+      utils: path.resolve(__dirname, './src/utils'),
+      reducers: path.resolve(__dirname, './src/store/reducers'),
+    },
   },
   mode: 'development', // webpack4`s devtool: 'source-map'
   module: {
