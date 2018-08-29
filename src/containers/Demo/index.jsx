@@ -40,6 +40,7 @@ export default class Admin extends Component {
       { test: '1' },
     )
     await console.log(123)
+    await console.log(process.env.NODE_ENV)
   }
 
   render() {
