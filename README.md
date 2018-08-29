@@ -33,17 +33,18 @@ enviroment design
 - [ ] Semantic or Ant-Design
 - [x] Mock API (使用 mock-json-server)
 - [ ] Axios
-- [ ] Ramda
-- [ ] dayjs
+- [x] Ramda
+- [x] dayjs
 - [ ] reducer helper
-- [ ] react router
+- [x] React Router with Dynamic imports
 - [ ] react-router-redux   目的就是要把react-router 的history 跟store 互相同步, 也就是說store 裡面會有router 的狀態
 - [ ] persistence state
 - [ ] react-motion
 - [ ] chart
 - [ ] favicon
 - [ ] localStorage
-- [x] web pack alias
+- [ ] 強制在指定檔案加上 /* @flow */ 字段，並且 git hook 檢查，如果指定的檔案沒有 @flow 不給 push
+- [x] webpack alias
 - [x] duck pattern
 
 - [x] ajax middleware
@@ -56,6 +57,7 @@ enviroment design
 - [ ] 1. debug 容易
 - [ ] 2. 打包速度快
 - [x] 3. 写 scss
-- [ ] 4. chunk 模式
+- [x] 4. chunk 模式
 - [ ] 5. 分离 development, production 配置 [login-flow/makewebpackconfig.js at master · mxstbr/login-flow · GitHub](https://github.com/mxstbr/login-flow/blob/master/makewebpackconfig.js)
 - [ ] 6. 添加 .env 参数
+- [x] 7. webpack dynamic imports

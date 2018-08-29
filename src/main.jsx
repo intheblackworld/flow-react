@@ -2,12 +2,11 @@ import * as React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
-// import Card from './components/Card'
-import Demo from './containers/Demo'
+import Router from './router/index'
 
 render(
   <Provider store={configureStore}>
-    <Demo />
+    <Router />
   </Provider>,
   document.getElementById('app'),
 )

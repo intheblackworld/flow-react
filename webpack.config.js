@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const AsyncChunkNames = require('webpack-async-chunk-names-plugin') // replace the filename of dynamic imports file from number to name
 const webpack = require('webpack')
 
 module.exports = {
@@ -8,8 +9,9 @@ module.exports = {
     index: './src/main.jsx',
   },
   output: {
-    filename: '[name]-bundle-[hash:8].js',
+    filename: '[name].bundle.[hash:8].js',
     path: path.resolve(__dirname, 'dist'),
+    chunkFilename: '[name].[hash:8].js', // TODO: change ENV config
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -25,7 +27,7 @@ module.exports = {
     },
   },
   // mode ex. development, production (默认提供所有可能的优化，如代码压缩 DefinePlugin, uglifyJS/作用域提升等)
-  mode: 'development', // webpack4`s devtool: 'source-map'
+  mode: 'development', // webpack4`s devtool: 'source-map' // TODO: change ENV config
   module: {
     rules: [
       {
@@ -79,7 +81,9 @@ module.exports = {
     new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
+      // TODO: change ENV config
     }),
+    new AsyncChunkNames(), // TODO: change ENV config
   ],
   /* 抽公共代碼用的 (防止重复)
    * Code Splitting 一般需要做这些事情：
