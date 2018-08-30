@@ -1,8 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const AsyncChunkNames = require('webpack-async-chunk-names-plugin') // replace the filename of dynamic imports file from number to name
 const webpack = require('webpack')
+const antdCustomThemeConfig = require('./src/assets/style/antdCustomThemeConfig.js')
 
 module.exports = {
   entry: {
@@ -62,6 +63,35 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'less-loader', // translates less into CSS
+            options: {
+              modifyVars: antdCustomThemeConfig,
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
@@ -78,7 +108,7 @@ module.exports = {
       template: 'index.html',
       hash: true,
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'), // 將 production 加入了全局的環境變數之後，第三方函式庫或專案內代碼會根據 production 做打包優化的判斷
       // TODO: change ENV config

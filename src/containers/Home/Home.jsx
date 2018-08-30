@@ -1,12 +1,16 @@
 import * as React from 'react'
+import { DatePicker } from 'antd'
 
 class Home extends React.Component {
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   render() {
-    return <h1>Home Component!</h1>
+    return (
+      <div>
+        <h1>Home Component!</h1>
+        <DatePicker />
+      </div>
+    )
   }
 }
 

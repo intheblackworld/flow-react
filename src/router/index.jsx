@@ -50,6 +50,9 @@ class Router extends React.Component {
             <Link to="/contact" activeClassName="active">
               Contact
             </Link>
+            <Link to="/demo" activeClassName="active">
+              Demo
+            </Link>
           </div>
 
           <Switch>

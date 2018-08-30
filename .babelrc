@@ -2,11 +2,14 @@
   "presets": [
     "babel-preset-env",
     "react",
-    ["env", {
-      "targets": {
-        "browsers": ["ie >= 9", "chrome >= 62"]
-      }      
-    }]
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["ie >= 9", "chrome >= 62"]
+        }
+      }
+    ]
   ],
   "plugins": [
     "transform-decorators-legacy",
@@ -14,9 +17,14 @@
     "transform-class-properties",
     "syntax-dynamic-import",
     [
-      "transform-runtime", {
+      "transform-runtime",
+      {
         "regenerator": true
       }
+    ],
+    [
+      "import",
+      { "libraryName": "antd", "libraryDirectory": "lib", "style": true }
     ]
   ]
 }
