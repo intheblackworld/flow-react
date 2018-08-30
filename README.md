@@ -23,14 +23,15 @@ yarn global add flow-typed
 
 
 ### TODO List
-enviroment design
+enviroment config
 - [x] 可使用 flow
 - [x] React
 - [x] 可使用 Redux
 - [x] 可使用 Reselect
 - [x] Redux-thunk
 - [x] 可使用 ImmutableJS
-- [ ] Semantic or Ant-Design
+- [x] Ant-Design
+- [x] Ant-Design custom theme
 - [x] Mock API (使用 mock-json-server)
 - [ ] Axios
 - [x] Ramda
@@ -53,11 +54,28 @@ enviroment design
 - [x] 可使用 decorator  [React.js 用 @decorator 來裝飾你的 Component 吧！ – Larry・Blog](https://larrylu.blog/react-decorator-hoc-2536db2737cb)
 - [x] 可使用 async await [Webpack 4 与 Babel/preset-env 升级不完全指南 · Issue #14 · zchen9/code · GitHub](https://github.com/zchen9/code/issues/14)  [Await Off My Shoulders: Enabling Async/Await in Webpack | CodingItWrong](https://codingitwrong.com/2018/02/05/await-off-my-shoulders.html)
 
-### Webpack 目标
-- [ ] 1. debug 容易
-- [ ] 2. 打包速度快
+### Webpack Goal
+- [x] 1. debug 容易
+- [x] 2. 打包速度快
 - [x] 3. 写 scss
 - [x] 4. chunk 模式
 - [ ] 5. 分离 development, production 配置 [login-flow/makewebpackconfig.js at master · mxstbr/login-flow · GitHub](https://github.com/mxstbr/login-flow/blob/master/makewebpackconfig.js)
 - [ ] 6. 添加 .env 参数
 - [x] 7. webpack dynamic imports
+
+
+### Folder Structure
+.
+|-- dist/
+|-- mockAPI/ (fake api generator)
+|-- src/
+    |-- assets/ 靜態資源
+    |-- components/ (dump components, antd custom components)
+    |-- containers/ (pages, smart components)
+    |-- libs/ (第三方套件庫)
+    |-- middleware/
+    |-- router/
+    |-- scripts/ (可執行的 nodejs file or bash file)
+    |-- store/ 
+    |-- utils/
+    |-- main.js
